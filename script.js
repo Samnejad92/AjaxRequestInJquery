@@ -1,7 +1,7 @@
 function onLoad(){
     console.log('salam');
     $.ajax({
-        url:"http://unique-game.ir/api/ScoreController.php?action=read",
+        url:'http://unique-game.ir/api/ScoreController.php?action=read',
         error: function(){
             alert("something wrong");
         },
