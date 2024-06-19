@@ -1,7 +1,7 @@
 function onLoad(){
     console.log('salam');
     $.ajax({
-        url:'https://reqres.in/api/users?page=2',
+        url: "http://unique-game.ir/api/ScoreController.php?action=read",
         error: function(){
             alert("something wrong");
         },
@@ -23,5 +23,14 @@ function onLoad(){
             console.log(xhr);
             
         },
+    });
+}
+function fetchDataWithAxios(){
+    axios.get("http://unique-game.ir/api/ScoreController.php?action=read")
+    .then((res)=>{
+        console.log(res.data);
+    })
+    .catch((err)=>{
+        console.log(err);
     });
 }
